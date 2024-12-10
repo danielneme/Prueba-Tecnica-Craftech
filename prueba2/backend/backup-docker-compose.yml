@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: database
+    image: postgres:12.0-alpine
+    env_file: ./.env.postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file: ./.env
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ../frontend:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static:
+  media:
