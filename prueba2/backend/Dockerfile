@@ -1,4 +1,4 @@
-# Usar una imagen oficial de Python como base
+# Usar imagen de Python como base
 FROM python:3.8-slim
 
 # Establecer la zona horaria
