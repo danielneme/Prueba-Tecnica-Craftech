@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'index.html'
+      - 'prueba3/index.html'
 
 jobs:
   build:
@@ -36,6 +36,6 @@ jobs:
     - name: Build and push the new Docker image
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: ./prueba3
         push: true
         tags: danielneme/nginx-prueba3:latest
