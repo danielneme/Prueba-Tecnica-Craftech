@@ -69,7 +69,7 @@ git clone https://github.com/danielneme/Prueba-Tecnica-Craftech.git
 cd Prueba-Tecnica-Craftech/prueba2
 
 ```
-2. Construir el archivo .env dentro del directorio Backend:
+2. Crear el archivo .env dentro del directorio Backend:
 
 # .env
 
@@ -111,7 +111,7 @@ git clone https://github.com/danielneme/Prueba-Tecnica-Craftech.git
 cd Prueba-Tecnica-Craftech/prueba2
 
 ```
-  4. Construir el archivo .env dentro del directorio Backend:
+  4. Crear el archivo .env dentro del directorio Backend:
 
 # .env
 
@@ -125,7 +125,7 @@ DJANGO_ALLOWED_HOSTS=*
   5. Construir y Ejecutar los Contenedores:
 ```markdown
 
-docker-compose up --build
+sudo docker-compose up --build
 
 ```
  6. Configurar el Grupo de Seguridad:
