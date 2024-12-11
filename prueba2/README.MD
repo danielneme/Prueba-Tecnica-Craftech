@@ -15,7 +15,7 @@ repositorio se debe incluir el código de la aplicación y un archivo README.md
 con instrucciones detalladas para compilar y desplegar la aplicación, tanto en
 una PC local como en la nube (AWS o GCP).
 
-• Cargas variables
+
 
 # Resolucion:
 
@@ -27,6 +27,7 @@ La aplicacion se subio a un repositorio unico, junto con las demas pruebas.
 En el mismo se definen 3 servicios. Backend, Frontend y la base de datos. Cada servicio tendra su propio contenedor al ejecutarlo, lo que permitira una separacion clara de responsabilidades y facilita la gestion y el escalado de cada componente de la aplicacion.
 
 Beneficios:
+
 • Separación de Concerns: Cada servicio tiene su propio contenedor, lo que facilita la gestión y el escalado. 
 
 • Dependencias: La sección depends_on asegura que el servicio db esté disponible antes de que el backend intente conectarse a él.
@@ -52,6 +53,7 @@ Beneficios:
 Los volúmenes se utilizan para persistir los datos de la base de datos PostgreSQL. Esto asegura que los datos no se pierdan cuando los contenedores se detienen o se eliminan.
 
 Beneficios:
+
 • Persistencia: Los datos de la base de datos se mantienen incluso si los contenedores se detienen o se eliminan.
 
 • Eficiencia: Los volúmenes permiten una gestión eficiente del almacenamiento y facilitan la migración de datos.
@@ -63,8 +65,8 @@ Beneficios:
 1. Clonar el Repositorio:
 
 ```markdown
-git clone <URL_del_repositorio>
-cd <nombre_del_repositorio>
+git clone https://github.com/danielneme/Prueba-Tecnica-Craftech.git
+cd Prueba-Tecnica-Craftech/prueba2
 
 ```
 2. Construir el archivo .env dentro del directorio Backend:
@@ -78,10 +80,10 @@ DEBUG=1
 DJANGO_ALLOWED_HOSTS=*
 ```
 
-3. Construir y Ejecutar los Contenedores:
+3. Construir y Ejecutar los Contenedores: (retirar sudo en caso de no utilizar linux)
 ```markdown
 
-docker-compose up --build
+sudo docker-compose up --build
 
 ```
 Acceder a la Aplicación:
@@ -105,8 +107,8 @@ ssh -i <ruta_a_la_clave>.pem ubuntu@<dirección_IP_de_la_instancia>
   3. Clonar el Repositorio:
 
 ```markdown
-git clone <URL_del_repositorio>
-cd <nombre_del_repositorio>
+git clone https://github.com/danielneme/Prueba-Tecnica-Craftech.git
+cd Prueba-Tecnica-Craftech/prueba2
 
 ```
   4. Construir y Ejecutar los Contenedores:
