@@ -111,13 +111,24 @@ git clone https://github.com/danielneme/Prueba-Tecnica-Craftech.git
 cd Prueba-Tecnica-Craftech/prueba2
 
 ```
-  4. Construir y Ejecutar los Contenedores:
+  4. Construir el archivo .env dentro del directorio Backend:
+
+# .env
+
+```markdown
+# Django settings
+SECRET_KEY=your_secret_key
+DEBUG=1
+DJANGO_ALLOWED_HOSTS=*
+```
+
+  5. Construir y Ejecutar los Contenedores:
 ```markdown
 
 docker-compose up --build
 
 ```
- 5. Configurar el Grupo de Seguridad:
+ 6. Configurar el Grupo de Seguridad:
 
     Abrir los puertos 3000 y 8000 en el grupo de seguridad de la instancia EC2.
 
